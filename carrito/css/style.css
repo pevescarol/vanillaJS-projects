@@ -65,7 +65,7 @@
     font-weight: 700;
 }
 
-.btn-header {
+.btn-main {
     height: 45px;
     width: 40%;
     border: none;
@@ -76,4 +76,18 @@
     font-weight: 700;
 }
 
+.btn-main:hover {
+    background-color: rgb(47, 201, 167);
+    transition: 0.5s;
+}
+
 /*** Fin Main ***/
+
+/*** Product ***/
+
+.card:hover {
+    box-shadow: -2px -1px 25px -4px rgba(173, 173, 173, 0.75);
+    -webkit-box-shadow: -2px -1px 25px -4px rgba(173, 173, 173, 0.75);
+    -moz-box-shadow:-2px -1px 25px -4px rgba(173, 173, 173, 0.75);
+    transition: 0.5s;
+}
