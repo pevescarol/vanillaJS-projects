@@ -5,6 +5,7 @@
 }
 
 /*** Nav ***/
+
 .navbar-brand {
     font-size: 2rem;
     color: #000;
@@ -94,6 +95,8 @@
 
 /*** Fin Product ***/
 
+/*** hero ***/
+
 .hero {
     background: linear-gradient(rgba(153, 152, 152, 0.2), rgba(61, 57, 57, 0.2)), url("../img/hero.jpg")no-repeat;
     background-size: cover;
@@ -110,4 +113,46 @@
     background-color: rgba(47, 20, 145, 0.185);
     border-radius: 50px;
     padding: 2.5rem;
+}
+
+/*** Fin hero ***/
+
+/*** footer ***/
+
+.newsletter {
+    background-color: #000;
+    color: #fff;
+}
+
+.btn-footer {
+    height: 45px;
+    width: 100px;
+    background-color: #fff;
+    margin-left: -10px;
+    border: 2px solid #fff;
+    font-weight: 600;
+    border-radius: 60px;
+}
+
+.newsletter input {
+    height: 45px;
+    width: 55%;
+    border: 2px solid #fff;
+    outline: none;
+    background-color: #000;
+    color: #fff;
+    margin-top: 20px;
+    margin-right: -35px;
+    font-weight: 600;
+    border-radius: 60px;
+}
+
+.newsletter p {
+    margin: 0;
+}
+
+.fab {
+    font-size: 2.5rem;
+    cursor: pointer;
+    padding-right: 5px;
 }
