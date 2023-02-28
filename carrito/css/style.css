@@ -55,6 +55,11 @@
     font-weight: 700;
 }
 
+.navbar-collapse {
+    background-color: #fff;
+    padding: 2rem;
+}
+
 /*** Fin Nav ***/
 
 /*** Main ***/
@@ -107,7 +112,7 @@
 .hero {
     background: linear-gradient(rgba(153, 152, 152, 0.2), rgba(61, 57, 57, 0.2)), url("../img/hero.jpg")no-repeat;
     background-size: cover;
-    height: 80vh;
+    height: 50vh;
     width: 100%;
     background-position: 30% 40%;
 }
@@ -115,13 +120,6 @@
 .hero p {
     font-size: 14px;
 }
-
-.hero img {
-    background-color: rgba(47, 20, 145, 0.185);
-    border-radius: 50px;
-    padding: 2.5rem;
-}
-
 /*** Fin hero ***/
 
 /*** footer ***/
@@ -159,7 +157,7 @@
 }
 
 .fab {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     cursor: pointer;
     padding-right: 5px;
 }
@@ -215,4 +213,22 @@
 
 .cart-menu.active {
     right: 0;
+}
+
+@media (max-width: 750px) {
+
+    .hero {
+        height: 40vh;
+    }
+    .hero h3 {
+        font-size: 1.4rem;   
+        padding-top: 3rem;
+    }
+    .hero p{
+        display: none;
+    }
+
+    .contact {
+        text-align: center;
+    }
 }

@@ -6,7 +6,7 @@ let closeCartMenu = document.querySelector("#close-cart")
 // Open cart
 cartIcon.onclick = () => {
     cartMenu.classList.add("active");
-    console.log("hey")
+    //console.log("hey")
 };
 
 // Close cart
