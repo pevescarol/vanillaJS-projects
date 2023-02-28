@@ -50,54 +50,25 @@
             <!-- Cart menu -->
             <div class="cart-menu">
                 <h2 class="cart-title text-center pt-4">Tu carrito</h2>
-                <div class="cart-content pt-5">
+                
                     <!------------------------->
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="card mb-3">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-around">
-                                        <div class="d-flex flex-row align-items-center">
-                                            <div>
-                                                <img
-                                                src="../carrito/img/miel.jpg"
-                                                class="img-fluid rounded-3" alt="Shopping item" style="width: 75px;">
-                                            </div>
-                                            <div class="mx-3 d-flex flex-column align-items-left">
-                                                <h6>Miel</h6>
-                                                <p class="small mb-0 text-muted">Fecoapi</p>
-                                                <div style="width: 60px;" class="mt-2">
-                                                    <input min="0" name="quantity" value="1" type="number" class="form-control form-control-md" />
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                        <div class="d-flex flex-row align-items-center">
-                                            
-                                            <div class="ms-3" style="width: 80px;">
-                                                <h6 class="mb-0">$300.00</h6>
-                                            </div>
-                                            <i class="fas fa-trash-alt cart-remove text-muted"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="row pt-5">
+                        <div class="col-lg-12 cart-content">
+                            
                         </div>
-                    </div>
-                </div> <!-- ./cart content-->
+                    </div><!-- ./cart content-->
 
                 <hr class="my-4">
 
                 <!-- Total -->
                 <div class="card bg-dark text-white rounded-3">
                     <div class="card-body">
-
-                        <div class="d-flex justify-content-between mb-4">
-                            <p class="mb-2">Total</p>
-                            <p class="mb-2">$0</p>
+                        <div class="d-flex justify-content-between mb-4 total">
+                            <p class="mb-2 total-title">Total</p>
+                            <p class="mb-2 total-price">$0</p>
                         </div>
 
-                        <button type="button" class="btn btn-primary btn-block btn-lg">
+                        <button type="button" class="btn  btn-buy btn-primary btn-block btn-lg">
                             Comprar<i class="fas fa-long-arrow-alt-right ms-2"></i>
                         </button>
                     </div>
@@ -113,90 +84,93 @@
         <div class="container py-5">
             <div class="row py-5 text-center">
                 <h1>Nuestros productos</h1>
-                
             </div>
             <div class="row">
-                <div class="col-lg-3 text-center">
+                <!-- Box 1  -->
+                <div class="col-lg-3 text-center cart-box">
                     <div class="card border-0 mb-2">
                         <div class="card-body">
-                            <img src="../carrito/img/pasta-sur.jpg" width="170px" class="img-fluid" alt="pasta">
+                            <img src="../carrito/img/pasta-sur.jpg" width="170px" class="img-fluid product-img" alt="pasta">
                         </div>
                     </div>
-                    <h6>Pasta Integral Sur</h6>
+                    <h6 class="product-title">Pasta Integral Sur</h6>
                     <p class="price">$329.99</p>
                     <button class="btn-cart px-3">Agregar a carrito</button>
                 </div>
-
-                <div class="col-lg-3 text-center">
+                <!-- Box 2  -->
+                <div class="col-lg-3 text-center cart-box">
                     <div class="card border-0 mb-2">
                         <div class="card-body">
-                            <img src="../carrito/img/yerba-isondu.jpg" class="img-fluid" alt="yerba mate">
+                            <img src="../carrito/img/yerba-isondu.jpg" class="img-fluid product-img" alt="yerba mate">
                         </div>
                     </div>
-                    <h6>Yerba mate Isondú</h6>
+                    <h6 class="product-title">Yerba mate Isondú</h6>
                     <p class="price">$540.00</p>
                     <button class="btn-cart px-3">Agregar a carrito</button>
                 </div>
-
-                <div class="col-lg-3 text-center">
+                <!-- Box 3  -->
+                <div class="col-lg-3 text-center cart-box">
                     <div class="card border-0 mb-2">
                         <div class="card-body">
-                            <img src="../carrito/img/miel.jpg" width="170px" class="img-fluid" alt="miel fecoapi">
+                            <img src="../carrito/img/miel.jpg" width="170px" class="img-fluid product-img" alt="miel fecoapi">
                         </div>
                     </div>
-                    <h6>Miel Fecoapi</h6>
+                    <h6 class="product-title">Miel Fecoapi</h6>
                     <p class="price">$474.50</p>
                     <button class="btn-cart px-3">Agregar a carrito</button>
                 </div>
-
-                <div class="col-lg-3 text-center">
+                <!-- Box 4  -->
+                <div class="col-lg-3 text-center cart-box">
                     <div class="card border-0 mb-2">
                         <div class="card-body">
-                            <img src="../carrito/img/pure.jpg" class="img-fluid" alt="pure deshidratado">
+                            <img src="../carrito/img/pure.jpg" class="img-fluid product-img" alt="pure deshidratado">
                         </div>
                     </div>
-                    <h6>Puré Deshidratado Cauqueva</h6>
+                    <h6 class="product-title">Puré Deshidratado Cauqueva</h6>
                     <p class="price">$300.00</p>
                     <button class="btn-cart px-3">Agregar a carrito</button>
                 </div>
-
-                <div class="col-lg-3 text-center">
+                <!-- Box 5  -->
+                <div class="col-lg-3 text-center cart-box">
                     <div class="card border-0 mb-2">
                         <div class="card-body">
-                            <img src="../carrito/img/pure.jpg" class="img-fluid" alt="pure deshidratado">
+                            <img src="../carrito/img/pure.jpg" class="img-fluid product-img" alt="pure deshidratado">
                         </div>
                     </div>
-                    <h6>Puré Deshidratado Cauqueva</h6>
+                    <h6 class="product-title">Puré Deshidratado Cauqueva</h6>
                     <p class="price">$300.00</p>
                     <button class="btn-cart px-3">Agregar a carrito</button>
                 </div>
-                <div class="col-lg-3 text-center">
+                <!-- Box 6  -->
+                <div class="col-lg-3 text-center cart-box">
                     <div class="card border-0 mb-2">
                         <div class="card-body">
-                            <img src="../carrito/img/pure.jpg" class="img-fluid" alt="pure deshidratado">
+                            <img src="../carrito/img/pure.jpg" class="img-fluid product-img" alt="pure deshidratado">
                         </div>
                     </div>
-                    <h6>Puré Deshidratado Cauqueva</h6>
+                    <h6 class="product-title">Puré Deshidratado Cauqueva</h6>
                     <p class="price">$300.00</p>
                     <button class="btn-cart px-3">Agregar a carrito</button>
                 </div>
-                <div class="col-lg-3 text-center">
+                <!-- Box 7  -->
+                <div class="col-lg-3 text-center cart-box">
                     <div class="card border-0 mb-2">
                         <div class="card-body">
-                            <img src="../carrito/img/pure.jpg" class="img-fluid" alt="pure deshidratado">
+                            <img src="../carrito/img/pure.jpg" class="img-fluid product-img" alt="pure deshidratado">
                         </div>
                     </div>
-                    <h6>Puré Deshidratado Cauqueva</h6>
+                    <h6 class="product-title">Puré Deshidratado Cauqueva</h6>
                     <p class="price">$300.00</p>
                     <button class="btn-cart px-3">Agregar a carrito</button>
                 </div>
-                <div class="col-lg-3 text-center">
+                <!-- Box 8  -->
+                <div class="col-lg-3 text-center cart-box">
                     <div class="card border-0 mb-2">
                         <div class="card-body">
-                            <img src="../carrito/img/pure.jpg" class="img-fluid" alt="pure deshidratado">
+                            <img src="../carrito/img/pure.jpg" class="img-fluid product-img" alt="pure deshidratado">
                         </div>
                     </div>
-                    <h6>Puré Deshidratado Cauqueva</h6>
+                    <h6 class="product-title">Puré Deshidratado Cauqueva</h6>
                     <p class="price">$300.00</p>
                     <button class="btn-cart px-3">Agregar a carrito</button>
                 </div>

@@ -192,14 +192,20 @@
     right: -100%;
     top: 0;
     width: 380px;
-    min-height: 100vh;
+    height: 100vh;
     padding: 20px;
     background-color: #eee;
     box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
     transition: 0.3s;
+    scroll-behavior:smooth ;
+    overflow: scroll;
 }
 
-#close-cart {
+.cart-remove {
+    cursor: pointer;
+}
+
+#close-cart { 
     position: absolute;
     top: 1rem;
     right: 0.8rem;
