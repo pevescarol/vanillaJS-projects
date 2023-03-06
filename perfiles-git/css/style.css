@@ -1,0 +1,187 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #141c2f;
+    color: #fff;
+}
+
+/**** Main ****/
+.main {
+    max-width: 70vw;
+    min-height: 20rem;
+}
+
+/*** Header ***/
+.header {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title {
+    margin: 0;
+    font-size: 1.7rem;
+}
+
+.theme {
+    font-size: .7rem;
+}
+
+.theme i {
+    margin-left: .5rem;
+}
+
+.theme-switch {
+    text-decoration: none;
+}
+
+/***  Search ***/
+.search {
+    padding: .5rem .5rem .5rem 1rem;
+    background-color: #1f2a48;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.form {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-input {
+    flex-grow: 1;
+    background-color: transparent;
+    border: none;
+    color: #eee;
+    font-family: inherit;
+    outline: none;
+    font-weight: 600;
+}
+
+.form-icon {
+    color: #0078fe;
+    font-size: 1.2rem;
+}
+
+.form-button {
+    background-color: #0078fe;
+    border: none;
+    padding: .5rem;
+    color: #fff;
+    border-radius: .3rem;
+    font-size: .7rem;
+    cursor: pointer;
+}
+
+/**** Result ****/
+.result {
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    background-color: #1f2a48;
+    display: grid;
+    border-radius: 1rem;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr 2fr 2fr;
+    gap: .5rem 1rem;
+    grid-template-areas: 
+        "avatar name joined"
+        "avatar username username"
+        "avatar bio bio"
+        "avatar stats stats"
+        "avatar contact contact"
+    ;
+}
+
+.waiting {
+    grid-row: 1 / -1;
+    grid-column:  1 / -1;
+    width: 100%;
+}
+
+.avatar {
+    width: 80px;
+    border-radius: 50%;
+    grid-area: avatar;
+    justify-self: center;
+}
+
+.name {
+    grid-area: name;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.joined {
+    grid-area: joined;
+    font-size: .5rem;
+    margin: 0;
+    justify-self: end;
+    align-self: center;
+}
+
+.username {
+    grid-area: username;
+    margin: 0;
+    color: #0078fe;
+}
+
+.bio {
+    grid-area: bio;
+    margin: 0;
+    font-size: .7rem;
+    color: #eee;
+}
+
+.stats {
+    grid-area: stats;
+    background-color: #141c2f;
+    display: flex;
+    flex-wrap: wrap;
+    padding: .5rem 1rem;
+    justify-content: space-around;
+    border-radius: 1rem;
+    margin: 1rem 0;
+}
+
+.stats > p {
+    margin: 0;
+    font-size: .5rem;
+    flex-basis: 33%;
+}
+
+.stats > small {
+    margin: 0;
+    font-size: 1rem;
+    flex-basis: 33%;
+    color: #eee;
+}
+
+.contact {
+    grid-area: contact;
+    display: grid;
+    gap: .5rem;
+    grid: 1fr 1fr / 1fr 1fr;
+}
+
+.link {
+    text-decoration: none;
+    font-size: .7rem;
+}
+.link i {
+    margin-right: .3rem;
+}
