@@ -1,10 +1,15 @@
 // API Github
 const API = "https://api.github.com/users/"
+let dark = true
 
 // 
 const result = document.querySelector(".result")
 const form = document.querySelector(".form")
 const input = document.querySelector(".form-input")
+const notFound = document.querySelector(".not-found")
+const themeSwitch = document.querySelector(".theme-switch")
+const themeCSS = document.querySelector(".theme-css")
+const themeName = document.querySelector(".theme-name")
 
 // imagen random de inicio
 if (document.readyState == "loading") {
@@ -14,7 +19,6 @@ if (document.readyState == "loading") {
 }
 
 function ready() {
-    let img = document.querySelector(".waiting")
     let num = Math.floor(Math.random() * 3)
     result.innerHTML = `<img src="./img/waiting-${num}.gif" alt="waiting" class="waiting">`
 }
@@ -28,9 +32,10 @@ form.addEventListener("submit", (e) => {
     const username = input.value.trim()
     if (!username) return
     getUserData(username)
-    
+    input.value = ""
 })
 
+themeSwitch.addEventListener("click", switchTheme)
 
 // consumir la APi de Github para obtener el suario
 async function getUserData(username) {
@@ -45,7 +50,13 @@ async function getUserData(username) {
         showUserData(data)
     } catch(error) {
         console.error("Error", error)
+        showNotFound()
     }
+}
+
+// Mostrar imagen de not found
+function showNotFound() {
+    result.innerHTML = `<img src="./img/404.gif" alt="not found" class="not-found">`
 }
 
 // Mostrat los datos del usuario
@@ -84,3 +95,14 @@ function showUserData(data) {
 }
 
 
+// Tema oscuro/claro
+function switchTheme() {
+    if(dark) {
+        themeCSS.setAttribute("href", "css/light.css")
+        themeName.textContent = "Day"
+    } else {
+        themeCSS.setAttribute("href", "css/dark.css")
+        themeName.textContent = "Night"
+    }
+    dark = !dark
+}
