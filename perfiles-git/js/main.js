@@ -6,6 +6,20 @@ const result = document.querySelector(".result")
 const form = document.querySelector(".form")
 const input = document.querySelector(".form-input")
 
+// imagen random de inicio
+if (document.readyState == "loading") {
+    document.addEventListener("DOMContentLoaded", ready)
+} else {
+    ready()
+}
+
+function ready() {
+    let img = document.querySelector(".waiting")
+    let num = Math.floor(Math.random() * 3)
+    result.innerHTML = `<img src="./img/waiting-${num}.gif" alt="waiting" class="waiting">`
+}
+
+
 // eventlistener Submit
 form.addEventListener("submit", (e) => {
     e.preventDefault()
@@ -68,3 +82,5 @@ function showUserData(data) {
         return new Date(date).toLocaleString("es-ES", options)
     }
 }
+
+
