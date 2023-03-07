@@ -182,9 +182,9 @@ body {
 }
 
 .link {
-    text-align: center;
     text-decoration: none;
     font-size: .7rem;
+    cursor: pointer;
 }
 .link i {
     margin-right: .3rem;
