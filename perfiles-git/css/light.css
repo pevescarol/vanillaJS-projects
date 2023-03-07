@@ -1,0 +1,28 @@
+*{
+    color: #474747;
+}
+
+body {
+    background-color: #e9e8fc;
+}
+
+/***  Search ***/
+.search {
+    background-color: #fff;
+    box-shadow: 3px 2px 5px 2px #cccbcb;
+}
+
+/**** Result ****/
+.result {
+    background-color: #fff;
+    box-shadow: 3px 2px 5px 2px #cccbcb;
+}
+
+
+.stats {
+    background-color: #e9e8fc;
+}
+
+.stats > * {
+    color: #474747;
+}

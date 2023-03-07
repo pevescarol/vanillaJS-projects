@@ -1,0 +1,45 @@
+
+body {
+    background-color: #141c2f;
+}
+
+.header-title {
+    color: #fff;
+}
+
+.theme i {
+    color: #fff;
+}
+
+.theme-switch {
+    color: #fff;
+}
+
+/***  Search ***/
+.search {
+    background-color: #1f2a48;
+    box-shadow: 3px 2px 5px 2px rgba(22, 22, 22, 0.24);
+}
+
+.form-input {
+    color: #eee;
+}
+
+/**** Result ****/
+.result {
+    background-color: #1f2a48;
+    box-shadow: 3px 2px 5px 2px rgba(22, 22, 22, 0.24);
+}
+
+.bio {
+    color: #eee;
+}
+
+.stats {
+    background-color: #141c2f;
+}
+
+.stats > small {
+    color: #eee;
+}
+
