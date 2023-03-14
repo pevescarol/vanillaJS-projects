@@ -21,7 +21,6 @@ form {
     padding: 2vw 4vw;
     width: 90%;
     max-width: 600px;
-    height: 80vh;
     border-radius: 10px;
 }
 
@@ -33,6 +32,7 @@ form h3 {
 }
 
 form input, form textarea {
+    width: 100%;
     border: 0;
     margin: 10px 0;
     padding: 20px;
@@ -62,4 +62,12 @@ form input, form textarea {
 .botonera {
     display: flex;
     justify-content: space-between;
+}
+
+form .error {
+    background: #ff5361;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    padding: 4px;
 }
