@@ -12,7 +12,6 @@ const formulario = document.querySelector("#form")
 const btnSubmit = document.querySelector("#form button[type=\"submit\"]")
 const btnReset = document.querySelector("#form button[type=\"reset\"]")
 const spinner = document.querySelector(".spin")
-console.log(spinner)
 
 // Asignar eventos
 
@@ -32,6 +31,9 @@ function enviarEmail(e) {
 
     spinner.classList.remove("hidden")
 
+    window.location.href=`mailto:${emailMsg.email}?subject=${emailMsg.asunto}&body=${emailMsg.mensaje}`
+
+
     setTimeout(() => {
         spinner.classList.add("hidden")
         resetearForm()
@@ -48,6 +50,8 @@ function enviarEmail(e) {
         }, 3000)
 
     }, 3000)
+
+
 }
 
 // validar entrada al inut

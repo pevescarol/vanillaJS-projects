@@ -10,15 +10,18 @@
 <body>
     <section>
         <div class="container">
-            <h3>Contacto</h3>
-            <form id="form">
+            <h3>Enviar emails</h3>
+            <form id="form" method="post">
                 <div class="email">
-                    <input type="email" placeholder="Email" id="email" name="email">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="email@example.com" id="email" name="email">
                 </div>
                 <div class="asunto">
-                    <input type="text" placeholder="Asunto" id="asunto" name="asunto">
+                    <label for="asunto">Asunto</label>
+                    <input type="text" placeholder="Asunto email" id="asunto" name="asunto">
                 </div>
                 <div class="textarea">
+                    <label for="mensaje">Mensaje</label>
                     <textarea id="mensaje" cols="30" rows="8" placeholder="Escribe tu mensaje aqui..." name="mensaje"></textarea>
                 </div>
                 <div class="botonera">
@@ -31,5 +34,6 @@
     </section>
 
     <script src="./js/app.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 </html>

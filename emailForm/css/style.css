@@ -31,10 +31,19 @@ form {
 }
 
 .container h3 {
+    text-align: center;
     color: #555;
     text-transform: uppercase;
     font-weight: 600;
     margin-bottom: 20px;
+}
+
+form label {
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #555;
+    padding-left: 8px;
 }
 
 form input, form textarea {
