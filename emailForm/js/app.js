@@ -10,12 +10,25 @@ const asunto = document.querySelector("#asunto")
 const mensaje = document.querySelector("#mensaje")
 const formulario = document.querySelector("#form")
 const btnSubmit = document.querySelector("#form button[type=\"submit\"]")
+const btnReset = document.querySelector("#form button[type=\"reset\"]")
 
 // Asignar eventos
 
 email.addEventListener("input", validar)
 asunto.addEventListener("input", validar)
 mensaje.addEventListener("input", validar)
+
+btnReset.addEventListener("click", function(e) {
+    e.preventDefault()
+
+    // reiniciar objeto
+    emailMsg.email = ''
+    emailMsg.asunto = ''
+    emailMsg.mensaje = ''
+
+    formulario.reset()
+    comprobarEmail()
+})
 
 // validar entrada al inut
 
@@ -39,7 +52,7 @@ function validar(e){
 
     // asignar los valores
     emailMsg[e.target.name] = e.target.value.trim().toLowerCase()
-    //console.log(emailMsg)
+    console.log(emailMsg)
 
     comprobarEmail()
 }

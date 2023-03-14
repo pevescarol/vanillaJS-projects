@@ -55,7 +55,7 @@ form input, form textarea {
     margin: 20px auto 0;
 }
 
-.botonera #reset {
+.botonera .reset {
     background: #555;
 }
 
