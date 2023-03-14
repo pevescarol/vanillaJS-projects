@@ -11,6 +11,8 @@ const mensaje = document.querySelector("#mensaje")
 const formulario = document.querySelector("#form")
 const btnSubmit = document.querySelector("#form button[type=\"submit\"]")
 const btnReset = document.querySelector("#form button[type=\"reset\"]")
+const spinner = document.querySelector(".spin")
+console.log(spinner)
 
 // Asignar eventos
 
@@ -18,17 +20,23 @@ email.addEventListener("input", validar)
 asunto.addEventListener("input", validar)
 mensaje.addEventListener("input", validar)
 
+formulario.addEventListener("submit", enviarEmail)
+
 btnReset.addEventListener("click", function(e) {
     e.preventDefault()
-
-    // reiniciar objeto
-    emailMsg.email = ''
-    emailMsg.asunto = ''
-    emailMsg.mensaje = ''
-
-    formulario.reset()
-    comprobarEmail()
+    resetearForm()
 })
+
+function enviarEmail(e) {
+    e.preventDefault()
+
+    spinner.classList.remove("hidden")
+
+    setTimeout(() => {
+        spinner.classList.add("hidden")
+        resetearForm()
+    }, 3000)
+}
 
 // validar entrada al inut
 
@@ -99,4 +107,14 @@ function comprobarEmail() {
     btnSubmit.classList.remove("enviar")
     btnSubmit.disabled = false
     
+}
+
+function resetearForm() {
+    // reiniciar objeto
+    emailMsg.email = ''
+    emailMsg.asunto = ''
+    emailMsg.mensaje = ''
+
+    formulario.reset()
+    comprobarEmail()
 }
