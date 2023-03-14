@@ -35,6 +35,18 @@ function enviarEmail(e) {
     setTimeout(() => {
         spinner.classList.add("hidden")
         resetearForm()
+
+        // crear aviso de exito
+        const alertaExito = document.createElement("p")
+        alertaExito.classList.add("exitoso")
+        alertaExito.textContent = "Mensaje enviado con éxito"
+
+        formulario.appendChild(alertaExito)
+
+        setTimeout(() => {
+            alertaExito.remove()
+        }, 3000)
+
     }, 3000)
 }
 
