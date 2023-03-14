@@ -12,16 +12,16 @@
         <form id="form">
             <h3>Contacto</h3>
             <div class="email">
-                <input type="email" placeholder="Email" id="email">
+                <input type="email" placeholder="Email" id="email" name="email">
             </div>
             <div class="asunto">
                 <input type="text" placeholder="Asunto" id="asunto" name="asunto">
             </div>
             <div class="textarea">
-                <textarea id="mensaje" cols="30" rows="8" placeholder="Escribe tu mensaje aqui..."></textarea>
+                <textarea id="mensaje" cols="30" rows="8" placeholder="Escribe tu mensaje aqui..." name="mensaje"></textarea>
             </div>
             <div class="botonera">
-                <button type="submit" id="enviar">Enviar</button>
+                <button type="submit" id="submit" class="enviar" disabled>Enviar</button>
                 <button type="reset" id="reset">Reset</button>
             </div>
         </form>

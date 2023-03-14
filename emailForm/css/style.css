@@ -44,7 +44,7 @@ form input, form textarea {
 
 .botonera button {
     padding: 10px;
-    background: #ff5361;
+    background: #f03b4a;
     color: #fff;
     font-size: 18px;
     border: 0;
@@ -65,9 +65,13 @@ form input, form textarea {
 }
 
 form .error {
-    background: #ff5361;
+    background: #f03b4a;
     color: #fff;
     font-weight: 600;
     text-align: center;
     padding: 4px;
+}
+
+.botonera .enviar {
+    opacity: .8 ;
 }
