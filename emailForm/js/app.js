@@ -14,18 +14,19 @@ mensaje.addEventListener("blur", validar)
 // validar entrada al inut
 
 function validar(e){
-    console.log(e.target.parentElement)
+    //console.log(e.target.parentElement)
     if(e.target.value.trim() === ""){
         mostrarAlerta(`El campo ${e.target.id} es obligatorio`, e.target.parentElement)
-    } else {
-        console.log("si hay algo...")
+        return  //para detenet el cod
     }
+    limpiarAlerta(e.target.parentElement)
 }
 
 // generar alerta en HTML
 
 function mostrarAlerta(msg, refe){
-    
+    limpiarAlerta(refe)
+
     // de esta forma si se escapan los datos y va a generar codigo seguro, en comparsción de innerHTML
     const error = document.createElement("p")
     error.textContent = msg
@@ -37,3 +38,11 @@ function mostrarAlerta(msg, refe){
 
 }
 
+function limpiarAlerta(refe){
+    // comprobar si ya existe un alerta
+    // utilizo el parentElement para que me modifique cada div, en cambio document.querySelector(".error") no es lo mismo para este caso
+    const alerta = refe.querySelector(".error")
+    if(alerta) {
+        alerta.remove()
+    }
+}
