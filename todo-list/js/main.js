@@ -1,5 +1,6 @@
 const formulario = document.querySelector("#formu")
 const tareasDiv = document.querySelector("#tasks")
+let tareas = []
 
 eventAgregar()
 
@@ -21,6 +22,21 @@ function agregarTarea(e) {
         mostrarError("Debes escribir algo :(")
         return //evita que se ejecuten mas lineas de codigo
     }
+
+    const tareaObj = {
+        id: Date.now(),
+        tarea    // igual a tarea: tarea
+    }
+
+
+    // añadir al arreglo de tareas
+    tareas = [...tareas,tareaObj]
+
+    // una vez agregado, crear el html
+    crearHTML()
+
+    // reiniciar el formulario
+    formulario.reset()
 }
 
 // mostrar mensaje de error
@@ -36,4 +52,29 @@ function mostrarError(error) {
     setTimeout(() => {
         mensajeError.remove()
     }, 3000);
+}
+
+// mostrar la lista d elos tweets
+function crearHTML() {
+
+    limpiarHTML()
+
+    if(tareas.length > 0){
+        tareas.forEach(tarea => {
+
+            // crear html
+            const li = document.createElement("li")
+            li.innerText = `${tarea.tarea}`
+
+            tareasDiv.appendChild(li)
+        })
+    }
+
+}
+
+// limpiar el HTML
+function limpiarHTML() {
+    while(tareasDiv.firstChild) {
+        tareasDiv.removeChild(tareasDiv.firstChild)
+    }
 }
