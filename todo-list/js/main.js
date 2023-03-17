@@ -8,6 +8,12 @@ function eventAgregar() {
     // cuando el usuario agrega una nueva tarea
     formulario.addEventListener("submit", agregarTarea)
 
+    // cuando el document esta lsito
+    document.addEventListener("DOMContentLoaded", () => {
+        tareas = JSON.parse(localStorage.getItem("tareas")) || []
+
+        crearHTML()
+    })
 }
 
 function agregarTarea(e) {
@@ -82,7 +88,12 @@ function crearHTML() {
             tareasDiv.appendChild(li)
         })
     }
+    sincronizarStorage()
+}
 
+//agragar tareas actuales al localStorage
+function sincronizarStorage() {
+    localStorage.setItem("tareas", JSON.stringify(tareas))
 }
 
 // limpiar el HTML
