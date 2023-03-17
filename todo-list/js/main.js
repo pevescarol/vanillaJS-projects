@@ -62,9 +62,22 @@ function crearHTML() {
     if(tareas.length > 0){
         tareas.forEach(tarea => {
 
+            //agregar boton eliminar
+            const btnEliminar = document.createElement("a")
+            btnEliminar.classList.add("borrar-tarea")
+            btnEliminar.innerText = "X"
+
+            //añadir funcion btn eliminar
+            btnEliminar.onclick = () => {
+                borrarTarea(tarea.id)
+            }
+
             // crear html
             const li = document.createElement("li")
             li.innerText = `${tarea.tarea}`
+
+            //asignar boton
+            li.appendChild(btnEliminar)
 
             tareasDiv.appendChild(li)
         })
@@ -77,4 +90,10 @@ function limpiarHTML() {
     while(tareasDiv.firstChild) {
         tareasDiv.removeChild(tareasDiv.firstChild)
     }
+}
+
+// eliminar una tarea
+function borrarTarea(id) {
+    tareas = tareas.filter( tarea => tarea.id !== id)
+    crearHTML()
 }
