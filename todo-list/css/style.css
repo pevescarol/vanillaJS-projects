@@ -64,7 +64,48 @@ body {
 
 #tasks {
     padding: 30px 20px;
-    margin-top: 10px;
     width: 100%;
     position: relative;
+}
+
+#tasks li {
+    background-color: #c5e1e6a3;
+    list-style: none;
+    height: 40px;
+    margin-bottom: 8px;
+    padding: 10px;
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #939697bc;
+}
+
+#tasks .borrar-tarea {
+    font-weight: 600;
+    color: #eb4343;
+    cursor: pointer;
+    width: 20px;
+    text-align: center;
+}
+
+@media screen and (max-width:768px) {
+    .container {
+        min-width: 340px;
+    }
+
+    #formu {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 0;
+    }
+
+    #formu input {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #formu button {
+        width: 40%;
+    }
 }
