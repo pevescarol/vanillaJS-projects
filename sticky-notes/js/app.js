@@ -18,7 +18,7 @@ function guardarNotas(notes) {
     localStorage.setItem("sn-notes", JSON.stringify(notes))
 }
 
-// Crear notas
+// Crear notas, mi textarea
 function crearNota(id, content) {
     const element = document.createElement("textarea")
 
@@ -60,12 +60,16 @@ function actualizarNota(id, newContent) {
     const notas = obtenerNotas()
     const targetNote = notas.filter(nota => nota.id == id)[0]
 
-    console.log(targetNote);
+    //console.log(targetNote);
 
     targetNote.content = newContent
     guardarNotas(notas) // LS
 }
 
 function eliminarNota(id, element) {
-    console.log("eliminando nota...")
+    const notas = obtenerNotas().filter(nota => nota.id != id)
+    //console.log(notas);
+
+    guardarNotas(notas) // actualizo LS
+    notesApp.removeChild(element)
 }
