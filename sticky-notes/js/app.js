@@ -24,7 +24,7 @@ function crearNota(id, content) {
 
     element.classList.add("note")
     element.value = content
-    element.placeholder = "Nota vacía!"
+    element.placeholder = "Escribe aquí..."
 
     element.addEventListener("change", () => {
         actualizarNota(id, element.value)

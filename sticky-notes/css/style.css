@@ -1,11 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body{
     background: #129191;
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    margin: 2.5em 0 1em 0;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 #app {
@@ -13,6 +24,7 @@ body{
     grid-template-columns: repeat(auto-fill, 200px);
     padding: 24px;
     gap: 24px;
+    place-content: center;
 }
 
 .note {
@@ -23,6 +35,7 @@ body{
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.15);
     resize: none;
     font-size: 16px;
+    outline: none;
 }
 
 .add-note {
