@@ -57,7 +57,13 @@ function agregarNota() {
 }
 
 function actualizarNota(id, newContent) {
-    console.log("updating...");
+    const notas = obtenerNotas()
+    const targetNote = notas.filter(nota => nota.id == id)[0]
+
+    console.log(targetNote);
+
+    targetNote.content = newContent
+    guardarNotas(notas) // LS
 }
 
 function eliminarNota(id, element) {
