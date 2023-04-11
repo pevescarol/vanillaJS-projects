@@ -11,3 +11,5 @@ Diferentes proyectos y ejercicios en JavaScript
 **EmailForm:** [https://enviar-email-form.netlify.app/](https://enviar-email-form.netlify.app/)
 
 **ToDo-list:** [https://todo-list-pj.netlify.app/](https://todo-list-pj.netlify.app/)
+
+**Sticky Notes:** [https://sticky-notes-car.netlify.app/](https://sticky-notes-car.netlify.app/)
